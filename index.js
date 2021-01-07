@@ -1,19 +1,21 @@
 const iptvController = require('./src/controllers/IpttvController');
 const app = require('./src/config/server-config');
-const { createProxyMiddleware } = require('http-proxy-middleware');
-const bodyParser = require("body-parser");
 
-app.get('/filmes/info/:vodId', iptvController.getVODInfo);
-app.get('/filmes/categorias',iptvController.getVODStreamCategories);
 
-app.get('/filmes/filmes', iptvController.getVODStreams);
-app.get('/api/filmes/:categoryId', iptvController.getVODStreams)
-app.get('/test/:id', iptvController.getAllEPGLiveStreams)
 
-app.use(
-    '/api',
-    createProxyMiddleware({
-      target: 'http://localhost:3080',
-      changeOrigin: true,
-    })
-);
+app.get('/api/filme/info/:vodId', iptvController.getVODInfo);
+app.get('/api/filmes/categorias',iptvController.getVODStreamCategories);
+app.get('/api/series/categorias',iptvController.getSeriesCategories);
+app.get('/api/lives/categorias', iptvController.getLiveStreamCategory);
+
+
+app.get('/api/lives', iptvController.getLiveStreams);
+app.get('/api/Usuario', iptvController.getAccountInfo);
+app.get('/api/filmes', iptvController.getVODStreams);
+app.get('/api/filmes/:categoryId', iptvController.getVODStreams);
+app.get('/api/series', iptvController.getSeries);
+app.get('/api/series/genero/:genero', iptvController.getSeries);
+app.get('/api/series/:categoryId', iptvController.getSeries);
+app.get('/api/test/:id', iptvController.getAllEPGLiveStreams);
+
+
