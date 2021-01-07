@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Slider from "../../components/slider/slider.js";
 
 //import api from './api';
 
@@ -19,15 +20,12 @@ class Series extends Component{
         const {Series} = this.state;
 
         return(
-            <div>
-                <h1>series</h1>
-
-                {Series.map(serie => ( 
-                    <div key={serie.num} >
-                        <img src={serie.cover} alt="imagem-do filme" />
-                    </div>
-                ))}
-            </div>
+            <div className="App">
+        <h1 className="App-title">
+          <span>Netflix</span> Slider
+        </h1>
+        <Slider movies={Series} />
+      </div>
         )
     }
 }
