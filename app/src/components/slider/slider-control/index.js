@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 import chevronLeft from "@iconify/icons-mdi/chevron-left";
 import chevronRight from "@iconify/icons-mdi/chevron-right";
 
-require("./style.scss");
+require("./style.css");
 
 const SliderControl = ({ arrowDirection, onClick }) => {
   return (

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Slider from "../../components/slider/slider 2";
 
 //import api from './api';
 
@@ -11,7 +12,7 @@ class Filmes extends Component{
     async componentDidMount() {
         await fetch("/filmes")
         .then((response) => response.json())
-        .then(response => response.filter(filtro => filtro.category_id === "14"))
+        //.then(response => response.filter(filtro => filtro.category_id === req.param.category_id ))
         .then(response => this.setState({ filmes: response}), console.log)
 
         //console.log(response.data);
@@ -24,23 +25,16 @@ class Filmes extends Component{
         const {filmes} = this.state;
 
         return(
-            <div>
-                <h1>filmes</h1>
+            
+            <div className="App">
+            <h1 className="App-title">
+              <span>Netflix</span> Slider
+            </h1>
+            <Slider movies={filmes} />
+          </div>
+          
 
-                {filmes.map(filme => ( 
-                    <div key={filme.num}>
-                        <div className="container">
-                            <div>
-                                <a href={filme.stream_id}>
-                                    <div className="background-do-filme">
-                                        <img src={filme.stream_icon} alt="imagem-do-filme" />
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
+            
         )
     }
 }

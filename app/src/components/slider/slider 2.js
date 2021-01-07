@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SliderControl from "./slider-control";
-import SliderItem from "./slider-item";
+import SliderItem from "./slider-item/index 2";
 
 require("./style.css");
 

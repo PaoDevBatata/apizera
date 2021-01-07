@@ -20,7 +20,7 @@ class home extends Component{
                             <Link to="/lives" >
                                 <button className="button">
                                     <div>
-                                        <img src={tv} alt="televisao"/>
+                                        <img src={tv} alt="television"/>
                                         <p>canais de tv</p>
                                     </div>
                                 </button>

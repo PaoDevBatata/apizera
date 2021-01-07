@@ -4,13 +4,17 @@ require("./style.css");
 
 const SliderItem = ({ movie, width }) => {
   return (
+  <a href={movie.stream_id}>
     <div className="slider-item" style={{ width: `${width}%` }}>
-      <img
-        className="slider-image"
-        src={`${movie.cover}`}
-        alt={movie.title}
-      />
-    </div>
+      <div>
+        <img
+          className="slider-image"
+          src={`${movie.stream_icon}`}
+          alt={movie.name}
+        />
+      </div>   
+    </div> 
+  </a>
   );
 };
 
