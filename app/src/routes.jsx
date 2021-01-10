@@ -1,8 +1,8 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
-import Login from './pages/sign in/sign-in';
-import CriarConta from './pages/sign up/sign-up';
+import Login from './pages/login/login';
+import CriarConta from './pages/create account/create-account';
 import Filmes from './pages/filmes/filmes';
 import Home from './pages/home/home';
 import Series from './pages/series/series';
