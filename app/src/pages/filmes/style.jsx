@@ -7,40 +7,59 @@ const Bodyy = styled.body`
     height: 100%;
     margin: auto;
 }
-
 .topheader {
     width: 100%;
     height: 60px;
     position: fixed;
-    z-index: 999;
+    z-index: 100;
     background-color: rgba(0,0,0, 0.7);
 
+    .buscar {
+        width: 200px;
+        height: 25px;
+        background-color: #7D7D7D;
+        border-style: none;
+    }
+
+    input[type="text"] {
+        color: #fff;
+        font-size: 15px
+    }
+    
+    input[type="text"]::placeholder {
+        color: #fff;
+        font-size: 15px
+    }
+
     .group_A {
-        padding: 20px
+        padding: 20px;
+        display: flexbox;
+        flex-direction: row-reverse;
     }
 
     .hamburguer {
         display: block;
-        
+        padding-left: 80%;
+
         .barra1 {
             background-color: #ffffff;
-            width: 25px;
+            width: 30px;
             height: 2px;
-            margin: 5px;
+            margin-bottom: 5px;
             border-radius: 15px;
         }
         .barra2 {
             background-color: #ffffff;
-            width: 25px;
+            width: 30px;
             height: 2px;
-            margin: 5px;
+            margin-bottom: 5px;
             border-radius: 15px;
         }
         .barra3 {
             background-color: #ffffff;
-            width: 25px;
+            width: 30px;
             height: 2px;
-            margin: 5px;
+            margin-bottom: 5px;
             border-radius: 15px;
         }
     }
@@ -54,7 +73,7 @@ h1 {
     position: relative;
     font-size: 20px;
     color: #cecece;
-    padding-left: 35px
+    padding-left: 35px;
 }
 h2 {
     position: relative;

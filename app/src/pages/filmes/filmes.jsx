@@ -30,12 +30,12 @@ class Filmes extends Component{
                     <img src={background} className="background" alt="Background"/>
                     <header className="topheader">
                         <div className="group_A">
+                            <input type="text" className="buscar" placeholder="buscar"/>
                             <div className="hamburguer">
-                                <div className="barra1"></div>
-                                <div className="barra2"></div>
-                                <div className="barra3"></div>
+                                <div className="barra1 ham"></div>
+                                <div className="barra2 ham"></div>
+                                <div className="barra3 ham"></div>
                             </div>
-                                <h1 className="App-title">Filmes</h1>
                         </div>
                     </header>
                     <div className="group_B">
