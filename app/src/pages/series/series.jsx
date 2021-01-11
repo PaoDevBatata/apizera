@@ -10,7 +10,7 @@ class Series extends Component{
     }
 
     async componentDidMount() {
-        await fetch("/series")
+        await fetch("/api/series")
         .then((response) => response.json())
         .then(response => this.setState({ Series: response}), console.log)
     }

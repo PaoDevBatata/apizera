@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+
 import Slider from "../../components/slider/slider 2";
 
-//import api from './api';
+import Bodyy from './style';
+import background from '../../components/img/background.jpg';
 
 class Filmes extends Component{
 
@@ -10,31 +12,146 @@ class Filmes extends Component{
     }
 
     async componentDidMount() {
-        await fetch("/filmes")
+        await fetch("/api/filmes")
         .then((response) => response.json())
-        //.then(response => response.filter(filtro => filtro.category_id === req.param.category_id ))
         .then(response => this.setState({ filmes: response}), console.log)
-
-        //console.log(response.data);
-
-        //this.setState({ filmes: response.data});
     }
 
     render() {
 
         const {filmes} = this.state;
-
-        return(
+        const filtrado = (num) =>{
+            return filmes.filter(a => a.category_id === num.toString())
+        }
             
-            <div className="App">
-            <h1 className="App-title">
-              <span>Netflix</span> Slider
-            </h1>
-            <Slider movies={filmes} />
-          </div>
-          
-
-            
+            return(
+            <Bodyy className="App">
+                <div className="body">
+                    <img src={background} className="background" alt="Background"/>
+                    <header className="topheader">
+                        <div className="hamburguer">
+                            <div className="barra1"></div>
+                            <div className="barra2"></div>
+                            <div className="barra3"></div>
+                        </div>
+                        <div>
+                            <h1 className="App-title">
+                                Filmes
+                            </h1>
+                        </div>
+                    </header>
+                    <div className="padding">
+                        <div>
+                            <h2>Novidades Da Semana</h2>
+                            <Slider movies={filtrado(38)} />
+                        </div>
+                        <div>
+                            <h2>007 - COLEÇÃO</h2>
+                            <Slider movies={filtrado(88)} />
+                        </div>
+                        <div>
+                            <h2>Ação</h2>
+                            <Slider movies={filtrado(3)} />
+                        </div>
+                        <div>
+                            <h2>Animação infantil</h2>
+                            <Slider movies={filtrado(15)} />
+                        </div>
+                        <div>
+                            <h2>Aventura</h2>
+                            <Slider movies={filtrado(4)} />
+                        </div>
+                        <div>
+                            <h2>Cinema Nacional</h2>
+                            <Slider movies={filtrado(26)} />
+                        </div>
+                        <div>
+                            <h2>CLÁSSICOS</h2>
+                            <Slider movies={filtrado(27)} />
+                        </div>
+                        <div>
+                            <h2>COLEÇÕES</h2>
+                            <Slider movies={filtrado(28)} />
+                        </div>
+                        <div>
+                            <h2>Comédia</h2>
+                            <Slider movies={filtrado(6)} />
+                        </div>
+                        <div>
+                            <h2>DC Comics</h2>
+                            <Slider movies={filtrado(29)} />
+                        </div>
+                        <div>
+                            <h2>Documentarios</h2>
+                            <Slider movies={filtrado(9)} />
+                        </div>
+                        <div>
+                            <h2>Drama</h2>
+                            <Slider movies={filtrado(10)} />
+                        </div>
+                        <div>
+                            <h2>Faroeste</h2>
+                            <Slider movies={filtrado(31)} />
+                        </div>
+                        <div>
+                            <h2>Ficção</h2>
+                            <Slider movies={filtrado(21)} />
+                        </div>
+                        <div>
+                            <h2>Gospel</h2>
+                            <Slider movies={filtrado(32)} />
+                        </div>
+                        <div>
+                            <h2>Guerra</h2>
+                            <Slider movies={filtrado(23)} />
+                        </div>
+                        <div>
+                            <h2>HARRY POTTER</h2>
+                            <Slider movies={filtrado(33)} />
+                        </div>
+                        <div>
+                            <h2>marvel studios</h2>
+                            <Slider movies={filtrado(34)} />
+                        </div>
+                        <div>
+                            <h2>musica</h2>
+                            <Slider movies={filtrado(81)} />
+                        </div>
+                        <div>
+                            <h2>O Senhor Dos Anéis</h2>
+                            <Slider movies={filtrado(35)} />
+                        </div>
+                        <div>
+                            <h2>Os Atrapalhões</h2>
+                            <Slider movies={filtrado(37)} />
+                        </div>
+                        <div>
+                            <h2>Policial</h2>
+                            <Slider movies={filtrado(8)} />
+                        </div>
+                        <div>
+                            <h2>Romance</h2>
+                            <Slider movies={filtrado(20)} />
+                        </div>
+                        <div>
+                            <h2>Shows</h2>
+                            <Slider movies={filtrado(36)} />
+                        </div>
+                        <div>
+                            <h2>Suspense</h2>
+                            <Slider movies={filtrado(22)} />
+                        </div>
+                        <div>
+                            <h2>Star Wars</h2>
+                            <Slider movies={filtrado(37)} />
+                        </div>
+                        <div>
+                            <h2>Terror</h2>
+                            <Slider movies={filtrado(14)} />
+                        </div>
+                    </div>
+                </div>
+            </Bodyy> 
         )
     }
 }

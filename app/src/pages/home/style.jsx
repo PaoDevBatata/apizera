@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
 const Bodyy = styled.body`
-    margin: -8px;
-    padding: 0px;
 
 .background{
     position: fixed;
@@ -58,7 +56,7 @@ background: linear-gradient(141deg, rgba(255,0,0,1) 0%, rgba(255,184,0,1) 100%);
         position: static;
         
         p{
-            font-size: 1.2rem;
+            font-size: 2vmax;
             color: #f4f4f4;
 
             font-family: Roboto;

@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 const Bodyy = styled.body`
-
-margin: -8px;
-
 .body{
     background-color: rgb(43, 43, 43);
     margin: 0px;

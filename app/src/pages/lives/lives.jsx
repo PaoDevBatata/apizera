@@ -9,7 +9,7 @@ class Filmes extends Component{
     }
 
     async componentDidMount() {
-        await fetch("/lives")
+        await fetch("/api/lives")
         .then((response) => response.json())
         
         
