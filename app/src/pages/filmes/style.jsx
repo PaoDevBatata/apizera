@@ -15,7 +15,13 @@ const Bodyy = styled.body`
     z-index: 999;
     background-color: rgba(0,0,0, 0.7);
 
+    .group_A {
+        padding: 20px
+    }
+
     .hamburguer {
+        display: block;
+        
         .barra1 {
             background-color: #ffffff;
             width: 25px;
@@ -40,7 +46,7 @@ const Bodyy = styled.body`
     }
 }
 
-.padding {
+.group_B {
     padding-top: 7vmax;
 }
 
@@ -48,7 +54,6 @@ h1 {
     position: relative;
     font-size: 20px;
     color: #cecece;
-    padding: 20px;
     padding-left: 35px
 }
 h2 {

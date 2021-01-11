@@ -29,18 +29,16 @@ class Filmes extends Component{
                 <div className="body">
                     <img src={background} className="background" alt="Background"/>
                     <header className="topheader">
-                        <div className="hamburguer">
-                            <div className="barra1"></div>
-                            <div className="barra2"></div>
-                            <div className="barra3"></div>
-                        </div>
-                        <div>
-                            <h1 className="App-title">
-                                Filmes
-                            </h1>
+                        <div className="group_A">
+                            <div className="hamburguer">
+                                <div className="barra1"></div>
+                                <div className="barra2"></div>
+                                <div className="barra3"></div>
+                            </div>
+                                <h1 className="App-title">Filmes</h1>
                         </div>
                     </header>
-                    <div className="padding">
+                    <div className="group_B">
                         <div>
                             <h2>Novidades Da Semana</h2>
                             <Slider movies={filtrado(38)} />
