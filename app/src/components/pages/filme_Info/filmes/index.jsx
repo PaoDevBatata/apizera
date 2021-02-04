@@ -11,9 +11,8 @@ export default App = () =>{
 
 const [filmes, setFilmes] = useState([]);
 const [categorias, setCategorias] = useState([])
-  
-useEffect(() => {
-    //pegando os filme menózada
+
+  //pegando os filme menózada
     const getFilmes = async() => {
       await fetch("/api/filmes").then((response) => response.json()).then(response => setFilmes(response));
       console.log(filmes)
@@ -23,13 +22,16 @@ useEffect(() => {
       await fetch("/api/filmes/categorias").then((response) => response.json()).then(response => setCategorias(response));
       console.log(categorias)
     }
+
+useEffect(() => {
+    
     //rodando as função jão
     const lal = async() => {
       await getFilmes();
       await getCategorias();
     }
     lal()
-  })
+  }, )
 
     const filtrado = (num) => {
       return filmes
