@@ -18,7 +18,8 @@ const Container = styled.div`
     input[type="text"] {
         color: #fff;
         font-size: 15px;
-        border-radius:0.417vmax;
+        border-radius:0.5vmax;
+        padding-left: 10px;
     }
     
     input[type="text"]::placeholder {
@@ -42,20 +43,11 @@ const Container = styled.div`
     }
 
 
-body
-{
-  margin: 0;
-  padding: 0;
-  
 
-  background: #232323;
-  color: #cdcdcd;
-  font-family: "Avenir Next", "Avenir", sans-serif;
-}
 
 #menuToggle
 {
-  display: block;
+  display: contents;
   position: relative;
   top: 50px;
   left: 50px;
@@ -83,8 +75,8 @@ body
 #menuToggle input
 {
   display: block;
-  width: 40px;
-  height: 32px;
+  width: 70px;
+  height: 70px;
   position: absolute;
   top: -7px;
   left: -5px;
@@ -158,11 +150,12 @@ body
 {
   position: absolute;
   width: 300px;
+  height: 100vmax;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
   
-  background: #ededed;
+  background: linear-gradient(165deg,#ededed 15%, transparent) ;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -185,6 +178,10 @@ body
   transform: none;
 }
 
+.poi {
+  cursor: pointer;
+
+}
 `;
 
 export default Container;
