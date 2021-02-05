@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from 'wouter'
 import Container from './styled';
 
 function Header() {
@@ -19,11 +19,7 @@ function Header() {
     
     
     <ul id="menu">
-      <a href="#"><li>Home</li></a>
-      <a href="#"><li>About</li></a>
-      <a href="#"><li>Info</li></a>
-      <a href="#"><li>Contact</li></a>
-      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+      <a className="poi"><Link  to="/home"><li>Home</li></Link></a>
     </ul>
   </div>
 </nav>

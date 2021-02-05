@@ -155,7 +155,7 @@ const Container = styled.div`
   padding: 50px;
   padding-top: 125px;
   
-  background: #ededed;
+  background: linear-gradient(165deg,#ededed 15%, transparent) ;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -178,6 +178,10 @@ const Container = styled.div`
   transform: none;
 }
 
+.poi {
+  cursor: pointer;
+
+}
 `;
 
 export default Container;

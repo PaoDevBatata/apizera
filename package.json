@@ -11,8 +11,9 @@
     "cors": "2.8.5",
     "express": "^4.17.1",
     "fetch-everywhere": "^1.0.5",
-    "lodash.pickby": "4.6.0"
-    
+    "lodash.pickby": "4.6.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "repository": {
     "url": "https://github.com/Izumi-No/react-api",
@@ -22,6 +23,5 @@
     "start": "node index.js ",
     "start-all": "concurrently \"node index.js\" \"cd app && yarn start\""
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
