@@ -89,7 +89,7 @@ const Slider = (props) => {
       sliderContents.push(
         <SliderItem
           movie={movies[index]}
-          key={`${movies[index].num}-${index}`}
+          key={`${movies[index].id}-${index}`}
           width={100 / itemsInRow}
         />
       );

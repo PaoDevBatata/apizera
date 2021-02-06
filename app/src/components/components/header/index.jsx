@@ -1,28 +1,43 @@
 import React from "react";
-import {Link} from 'wouter'
-import Container from './styled';
+
+import Container from "./styled";
 
 function Header() {
   return (
-    <Container >
+    <Container>
       <div className="group_A">
-      <nav role="navigation">
-  <div id="menuToggle">
-    
-    <input type="checkbox" />
-    
-   
-    
-    <span></span>
-    <span></span>
-    <span></span>
-    
-    
-    <ul id="menu">
-      <a className="poi"><Link  to="/home"><li>Home</li></Link></a>
-    </ul>
-  </div>
-</nav>
+        <nav role="navigation">
+          <div id="menuToggle">
+            <input type="checkbox" />
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+              <a href="/home">
+                <li>Home</li>
+              </a>
+              <a href="#">
+                <li>Assistencia</li>
+              </a>
+              <div className="linha"  />
+              <a href="/filmes">
+                <li>Filmes</li>
+              </a>
+              <a href="/series">
+                <li>Series</li>
+              </a>
+              <a href="/lives">
+                <li>Canais de tv</li>
+              </a>
+              <div className="linha"  />
+              <a href="/">
+                <li>Sair</li>
+              </a>
+            </ul>
+          </div>
+        </nav>
         <input type="text" className="buscar" placeholder="buscar" />
       </div>
     </Container>

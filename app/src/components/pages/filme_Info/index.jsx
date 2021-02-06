@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Link} from 'wouter';
-import axios from 'axios'
 import play from "./play.png"
 /*let Background={{
 a
